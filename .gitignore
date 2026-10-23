@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/.vite/
+
+# Temporary video render scratch files
+demo/temp/
+
+# SQLite lock files
+*.db-shm
+*.db-wal
+*.sqlite3-journal
+
+# OS
+.DS_Store
+Thumbs.db

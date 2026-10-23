@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+  }
+}
+
+/* Custom Tactical Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b131e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f3554;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Glowing Pulsing Animations */
+@keyframes tactical-pulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4)); }
+  50% { opacity: 0.6; filter: drop-shadow(0 0 2px rgba(6, 182, 212, 0.1)); }
+}
+
+@keyframes airlock-alert {
+  0%, 100% { border-color: rgba(239, 68, 68, 0.9); box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+  50% { border-color: rgba(245, 158, 11, 0.8); box-shadow: 0 0 10px rgba(245, 158, 11, 0.2); }
+}
+
+.animate-airlock {
+  animation: airlock-alert 2s infinite ease-in-out;
+}
+
+.pulse-glow {
+  animation: tactical-pulse 2s infinite ease-in-out;
+}
